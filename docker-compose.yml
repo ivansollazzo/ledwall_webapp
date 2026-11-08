@@ -1,0 +1,39 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: ledwall-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: gabriele
+      MYSQL_DATABASE: intellicraftersdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: bind
+        source: ./docker/mysql/data
+        target: /var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -pgabriele --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 15s
+
+  ledwallmanager:
+    build:
+      context: ./ledwallmanager
+    container_name: ledwall-manager
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  serverjakarta:
+    build:
+      context: ./serverjakarta
+    container_name: ledwall-jakarta
+    ports:
+      - "8000:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy

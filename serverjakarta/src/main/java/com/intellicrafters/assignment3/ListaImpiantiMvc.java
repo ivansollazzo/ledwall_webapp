@@ -16,7 +16,7 @@ public class ListaImpiantiMvc extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         System.out.println("Connessione al database in corso...");
         // istanzio la classe che mi permette di fare le query
-        DBConnectionProvider dbConnectionProvider = new DBConnectionProvider("frostnetwork.iliadboxos.it", 3306, "intellicraftersdb", "intellicrafters", "mg7XSzS9mmvx5sJ4r2ex");
+        DBConnectionProvider dbConnectionProvider = new DBConnectionProvider("mysql", 3306, "intellicraftersdb", "root", "gabriele");
         // DBConnectionProvider dbConnectionProvider = new DBConnectionProvider("localhost", 3306, "intellicraftersdb", "root", "gabriele");
         // DBConnectionProvider dbConnectionProvider = new DBConnectionProvider();
         ArrayList<Impianto> impianti = new ArrayList<>();

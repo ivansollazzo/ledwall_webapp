@@ -48,7 +48,7 @@ public class InviaSegnalazione extends HttpServlet {
         // Connessione al database
         System.out.println("Connessione al database in corso...");
         // DBConnectionProvider dbConnectionProvider = new DBConnectionProvider("localhost", 3306, "intellicraftersdb", "root", "gabriele");
-        DBConnectionProvider dbConnectionProvider = new DBConnectionProvider("frostnetwork.iliadboxos.it", 3306, "intellicraftersdb", "intellicrafters", "mg7XSzS9mmvx5sJ4r2ex");
+        DBConnectionProvider dbConnectionProvider = new DBConnectionProvider("mysql", 3306, "intellicraftersdb", "root", "gabriele");
         dbConnectionProvider.inserisciSegnalazione(this.idImpianto, this.idPalinsesto, this.idCartellone, this.durata, this.timestamp);
 
     }

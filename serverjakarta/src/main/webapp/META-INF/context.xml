@@ -8,20 +8,20 @@
         maxIdle="6"
 		maxWait="1000"
 			  name="jdbc/intellicraftersdb"
-			  username="intellicrafters"
-			  password="mg7XSzS9mmvx5sJ4r2ex"
+			  username="root"
+			  password="gabriele"
 			  type="javax.sql.DataSource"
-			  url="jdbc:mysql://frostnetwork.iliadboxos.it:3306/intellicraftersdb?useLegacyDatetimeCode=false&amp;serverTimezone=Europe/Rome"
+			  url="jdbc:mysql://mysql:3306/intellicraftersdb?useLegacyDatetimeCode=false&amp;serverTimezone=Europe/Rome"
 			  testOnBorrow="true"
 		validationQuery="SELECT 1" />		
 </Context>
 <!-- frostnetwork.iliadboxos.it:3306 -->
 <!--
 name="jdbc/intellicraftersdb"
-username="intellicrafters"
-password="mg7XSzS9mmvx5sJ4r2ex"
+username="root"
+password="gabriele"
 type="javax.sql.DataSource"
-url="jdbc:mysql://frostnetwork.iliadboxos.it:3306/intellicraftersdb?useLegacyDatetimeCode=false&amp;serverTimezone=Europe/Rome"
+url="jdbc:mysql://mysql:3306/intellicraftersdb?useLegacyDatetimeCode=false&amp;serverTimezone=Europe/Rome"
 -->
 <!--
 name="jdbc/intellicraftersdb"
