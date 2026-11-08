@@ -10,6 +10,4 @@ You will find an implementation of a Spring Boot and a Jakarta server.
 - Map loaded from a jakarta service
 
 ## Collaborators
-This project has been done with my colleagues:
-- Giovanni Castelli, giovanni.castelli06@community.unipa.it, caste283289@gmail.com
-- Ivan Sollazzo
+This project has been done with my colleague Gabriele Costa
